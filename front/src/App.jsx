@@ -19,12 +19,20 @@ function App() {
     setSelectedMovieId(id);
   };
 
-  return (
+  return (<div><nav>
+    <h1>Movie Night</h1>
+    <h3>
+
+    Search a movie and pick your seats
+    </h3>
+
+
+  </nav>
     <main>
       {page === 'home' && <HomePage onNavigate={navigateTo} />}
       {page === 'details' && <DetailsPage movieId={selectedMovieId} onNavigate={navigateTo} />}
       {page === 'seats' && <SeatsPage movieId={selectedMovieId} onNavigate={navigateTo} />}
-    </main>
+    </main></div>
   );
 }
 
